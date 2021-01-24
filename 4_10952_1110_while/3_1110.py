@@ -1,13 +1,12 @@
-n = new = int(input())
+n = m = int(input())
 l = 0
 
 while True:
-    sh = n//10
-    re = n % 10
-    p = sh + re
-    l += 1
-    new = int(str(n%10) + str(p%10)) 
+    new = (n//10) + (n % 10)  # 몫과 나머지 합치고
+    l += 1  # new의 과정 횟수 count
+    n = int(str(n % 10)+str(new % 10))  # 새로운 수 조합
 
-    if (n == new):
+    if n == m:  # 변수확인 잘해야함
         break
+
 print(l)
